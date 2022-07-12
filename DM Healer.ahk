@@ -28,7 +28,7 @@ SetWorkingDir %A_ScriptDir%
 Menu menuArquivo, Add, &Open...`tCtrl+O, MenuAbrir
 Menu menuArquivo, Disable, 1&
 
-Menu menuArquivo, Add, &ConfiguraÁıes..., MenuConfiguracao
+Menu menuArquivo, Add, &Configura√ß√µes..., MenuConfiguracao
 ; Menu menuArquivo, Disable, 2&
 
 Menu menuArquivo, Add, Update, MenuUpdate
@@ -70,7 +70,7 @@ global autoPush_x, auto_Push_y, auto_Push_status := 0
 
 global buff_x_1, buff_y_1, buff_x_2, buff_y_2
 
-; TÌtulo aba Heal
+; T√≠tulo aba Heal
 Gui Principal: Add, Tab3, , Heal|Utilities (1)|Utilities (2)|Training
 Gui Principal: Font, s15 Bold, Tahoma
 Gui Principal: Add, Text, x190 y35 w147 h25 +0x200, Heal Control
@@ -112,7 +112,7 @@ Gui Principal: Add, ComboBox, x120 y73 w55 +Disabled +Uppercase vcbxKeyParalyze 
 Gui Principal: Add, CheckBox, x28 y110 w15 h23 vcheckAutoHaste gCheckAutoHaste
 Gui Principal: Add, Text, x50 y110 w65 h23 +Disabled +0x200 vtxtAutoHaste, Auto Haste:
 Gui Principal: Add, ComboBox, x120 y110 w55 +Disabled +Uppercase vcbxKeyAutoHaste gsetKeyhaste, 1|2|3|4|5|6|7|8|9|0|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12
-; Gui Principal: Add, Text, x185 y73 w80 h23 +0x200 vtxtStatusParalyze +Disabled, N„o configurado
+; Gui Principal: Add, Text, x185 y73 w80 h23 +0x200 vtxtStatusParalyze +Disabled, N√£o configurado
 Gui Principal: Add, Text, x300 y136 w55 h23, Auto Push:
 Gui Principal: Add, Button, x370 y134 w55 h20 vbtn_AutoPush gclickAutoPush, Off
 Gui Principal: Add, text, x435 y130 w50 h50 vautoPush_Pos_Status +Disabled, X = ?`nY = ?
@@ -166,7 +166,7 @@ Gui Principal: Add, Button, x360 y184 w80 h23 vset_ManaTraining gbtn_SetaManaTra
 Gui Principal: Add, Text, x250 y130 w60 h23 vtxtTimer_Training, Timer (ms):
 Gui Principal: Add, Edit, x305 y130 w50 h15 veditTimer_Training
 Gui, Principal: Tab
-; Botıes
+; Bot√µes
 Gui Principal: Add, Text, x14 y227 w55 h23 +0x200, Timer (ms):
 Gui Principal: Add, Edit, x69 y227 w70 h21 vtimer, 300
 Gui Principal: Add, Button, x320 y227 w80 h23 +Disabled vstartPause gbtn_Start, &Start
@@ -174,24 +174,24 @@ Gui Principal: Add, Button, x408 y227 w80 h23 +Disabled, &Save
 Gui Principal: Add, Button, x145 y227 w70 h21 vbtn_Timer gsetTimer, Set Timer
 
 ; StatusBar
-Gui Principal: Add, StatusBar, vstatusBar, Falta definir a posiÁ„o inicial e final da vida/mana.
+Gui Principal: Add, StatusBar, vstatusBar, Falta definir a posi√ß√£o inicial e final da vida/mana.
 
-; Tela de ConfiguraÁ„o
+; Tela de Configura√ß√£o
 
-; TÌtulo
+; T√≠tulo
 Gui Configuracao: Font, s16 Bold, Tahoma
-Gui Configuracao: Add, Text, x28 y12 w154 h31 +0x200, ConfiguraÁıes
+Gui Configuracao: Add, Text, x28 y12 w154 h31 +0x200, Configura√ß√µes
 Gui Configuracao: Font
 
-; Componentes principais da configuraÁ„o
+; Componentes principais da configura√ß√£o
 Gui Configuracao: Add, Text, x18 y67 w65 h23 +0x200, Setar a vida:
 Gui Configuracao: Add, Radio, x100 y54 w120 h23 vpointClick gPointClickFunc, Point-and-Click
-Gui Configuracao: Add, Radio, x100 y84 w133 h23 vrectangle gRectangleFunc, SeleÁ„o com ret‚ngulo
+Gui Configuracao: Add, Radio, x100 y84 w133 h23 vrectangle gRectangleFunc, Sele√ß√£o com ret√¢ngulo
 GuiControl, Configuracao:, rectangle, 1
 Gui Configuracao: Add, Text, x55 y128 w28 h23 +0x200, Som:
 Gui Configuracao: Add, Slider, x95 y130 w203 h32, 50
 
-; Botıes
+; Bot√µes
 Gui Configuracao: Add, Button, x229 y189 w80 h23 gBotaoVoltarConfFunc, &Voltar
 
 Gui Principal: +LabelGUIPrincipal
@@ -255,9 +255,9 @@ SetaFishingRod:
         if(water_coords_x.Length() >= 1){
             GuiControl, Principal: Enabled, btn_AutoFishing
         }
-        TrayTip, , PosiÁ„o da vara de pesca setado com sucesso!
+        TrayTip, , Posi√ß√£o da vara de pesca setado com sucesso!
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -265,7 +265,7 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     MouseGetPos, water_x, water_y
@@ -285,7 +285,7 @@ SetaWater:
         water_coords_y := []
         WinActivate
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -311,7 +311,7 @@ BotaoVoltarConfFunc:
     Gui Configuracao: cancel
 Return
 
-; FunÁ„o externa que permite ao usuario selecionar uma ·rea na tela
+; Fun√ß√£o externa que permite ao usuario selecionar uma √°rea na tela
 LetUserSelectRect(ByRef X1, ByRef Y1, ByRef X2, ByRef Y2) {
     static r := 1
     ; Create the "selection rectangle" GUIs (one for each edge).
@@ -377,7 +377,7 @@ btn_SetaLife:
         WinActivate
         goto ^1
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
     
 Return
@@ -390,7 +390,7 @@ btn_SetaMana:
         WinActivate
         goto ^3
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -402,17 +402,17 @@ btn_SetaUtility:
         WinActivate
         goto ^+1
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
 verifyVersion:
     SetTimer, verifyVersionOnRun, 100000
-    UrlDownloadToFile, https://raw.githubusercontent.com/Kanchii/AutoHotkey_HealBot/master/version.txt, version_temp.txt
+    UrlDownloadToFile, https://raw.githubusercontent.com/DouglasSMartins/DM-HealerTibia/master/version.txt, version_temp.txt
     FileRead, v_tmp, version_temp.txt
     FileRead, vers, version.txt
     if(v_tmp != vers){
-        MsgBox, 0x4, AtualizaÁ„o, Tem uma nova vers„o disponÌvel. Gostaria de atualizar?, 
+        MsgBox, 0x4, Atualiza√ß√£o, Tem uma nova vers√£o dispon√≠vel. Gostaria de atualizar?, 
         IfMsgBox Yes
             goto UpdateProgram
         else
@@ -423,11 +423,11 @@ verifyVersion:
 Return
 
 verifyVersionOnRun:
-    UrlDownloadToFile, https://raw.githubusercontent.com/Kanchii/AutoHotkey_HealBot/master/version.txt, version_temp.txt
+    UrlDownloadToFile, https://raw.githubusercontent.com/DouglasSMartins/DM-HealerTibia/master/version.txt, version_temp.txt
     FileRead, v_tmp, version_temp.txt
     FileRead, vers, version.txt
     if(v_tmp != vers){
-        TrayTip, , Uma nova vers„o foi identificada. Atualize o macro e receba uma loli., , 0x1
+        TrayTip, , Uma nova vers√£o foi identificada. Atualize o macro e receba uma loli., , 0x1
         SetTimer, verifyVersionOnRun, off
         Menu menuArquivo, Enable, Update
     }
@@ -436,7 +436,7 @@ Return
 
 UpdateProgram:
     FileRead, v_ants, version.txt
-    UrlDownloadToFile, https://raw.githubusercontent.com/Kanchii/AutoHotkey_HealBot/master/version.txt, version.txt
+    UrlDownloadToFile, https://raw.githubusercontent.com/DouglasSMartins/DM-HealerTibia/master/version.txt, version.txt
     FileRead, v_depois, version.txt
     FileDelete, version_temp.txt
     ExitApp
@@ -450,7 +450,7 @@ MenuAbrir:
 Return
 
 MenuConfiguracao:
-    Gui Configuracao: Show, w319 h227, ConfiguraÁıes
+    Gui Configuracao: Show, w319 h227, Configura√ß√µes
 Return
 
 MenuUpdate:
@@ -458,7 +458,7 @@ MenuUpdate:
 Return
 
 MenuComandos:
-    MsgBox, Ctrl+1 -> Seta a posiÁ„o inicial da barra de vida`nCtrl+2 -> Seta a posiÁ„o final da barra de vida (Modo Point-and-Click)`nCtrl+3 -> Seta a posiÁ„o inicial da barra de mana`nCtrl+4 -> Seta a posiÁ„o final da barra de mana (Modo Point-and-Click)`nCtrl+Shift+1 -> Seta a posiÁ„o inicial da barra de status`nCtrl+Shift+2 -> Seta a posiÁ„o final (Modo Point-and-Click)`nAlt+X -> Pausa/Ativa o BOT`nCtrl+Z -> Seta a posiÁ„o do Drag&Drop`nCtrl+LButton* -> Ativa a funÁ„o do Drag&Drop`nAlt+A -> Pausa/Ativa o Drag&Drop`n`n`n*LButton = Bot„o esquerdo do mouse
+    MsgBox, Ctrl+1 -> Seta a posi√ß√£o inicial da barra de vida`nCtrl+2 -> Seta a posi√ß√£o final da barra de vida (Modo Point-and-Click)`nCtrl+3 -> Seta a posi√ß√£o inicial da barra de mana`nCtrl+4 -> Seta a posi√ß√£o final da barra de mana (Modo Point-and-Click)`nCtrl+Shift+1 -> Seta a posi√ß√£o inicial da barra de status`nCtrl+Shift+2 -> Seta a posi√ß√£o final (Modo Point-and-Click)`nAlt+X -> Pausa/Ativa o BOT`nCtrl+Z -> Seta a posi√ß√£o do Drag&Drop`nCtrl+LButton* -> Ativa a fun√ß√£o do Drag&Drop`nAlt+A -> Pausa/Ativa o Drag&Drop`n`n`n*LButton = Bot√£o esquerdo do mouse
 Return
 
 MenuSobre:
@@ -484,14 +484,14 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     if(tipoSelecao = 0){
         status |= (1 << 0)
         MouseGetPos, x1_lifeBar, y1_lifeBar
         if(status = 1){
-            GuiControl, Principal:, statusBar, Falta definir a posiÁ„o final da vida.
+            GuiControl, Principal:, statusBar, Falta definir a posi√ß√£o final da vida.
         } else if(status = 3){
             GuiControl, Principal:, statusBar, O bot se encontra pausado.
             TrayTip, , Life setado com sucesso!, , 0x1
@@ -550,13 +550,13 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     status |= (1 << 1)
     MouseGetPos, x2_lifeBar, y2_lifeBar
     if(status = 2){
-        GuiControl, Principal:, statusBar, Falta definir a posiÁ„o inicial da vida.
+        GuiControl, Principal:, statusBar, Falta definir a posi√ß√£o inicial da vida.
     } else if(status = 3){
         GuiControl, Principal:, statusBar, O bot se encontra pausado.
         TrayTip, , Life setado com sucesso!, , 0x1
@@ -585,14 +585,14 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     if(tipoSelecao = 0){
         status |= (1 << 0)
         MouseGetPos, x1_manaBar, y1_manaBar
         if(status = 1){
-            GuiControl, Principal:, statusBar, Falta definir a posiÁ„o final da mana.
+            GuiControl, Principal:, statusBar, Falta definir a posi√ß√£o final da mana.
         } else if(status = 3){
             GuiControl, Principal:, statusBar, O bot se encontra pausado.
             TrayTip, , Mana setado com sucesso!, , 0x1
@@ -649,13 +649,13 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     status |= (1 << 1)
     MouseGetPos, x2_manaBar, y2_manaBar
     if(status = 2){
-        GuiControl, Principal:, statusBar, Falta definir a posiÁ„o inicial da mana.
+        GuiControl, Principal:, statusBar, Falta definir a posi√ß√£o inicial da mana.
     } else if(status = 3){
         GuiControl, Principal:, statusBar, O bot se encontra pausado.
         TrayTip, , Mana setado com sucesso!, , 0x1
@@ -705,7 +705,7 @@ Return
     WinGetTitle, windowName, A
 	IfNotInString, windowName, Tibia
 	{
-		MsgBox, FaÁa isso somente na tela do Tibia.
+		MsgBox, Fa√ßa isso somente na tela do Tibia.
         Return
 	}
     if(tipoSelecao = 0){
@@ -801,7 +801,7 @@ setPosAPR:
         TrayTip, , Ring setado com sucesso!
         
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -822,7 +822,7 @@ setPosAPA:
         TrayTip, , Amulet setado com sucesso!
         
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -843,7 +843,7 @@ setPosAPAmmo:
         TrayTip, , Ammo setado com sucesso!
         
     } else {
-        MsgBox, O Tibia n„o se encontra aberto
+        MsgBox, O Tibia n√£o se encontra aberto
     }
 Return
 
@@ -1131,7 +1131,7 @@ StartTrainingButton:
             Return
         }
         if(!varExist(min_x_mana)){
-            MsgBox, Faltou setar a posiÁ„o da barra de mana
+            MsgBox, Faltou setar a posi√ß√£o da barra de mana
             Return
         }
         if(tempo != ""){
@@ -1448,7 +1448,7 @@ btn_Start:
         GuiControl, Principal:, startPause, Start
         TrayTip, , Bot pausado, , 0x1
     } else {
-        GuiControl, Principal:, statusBar, O bot est· em execuÁ„o.
+        GuiControl, Principal:, statusBar, O bot est√° em execu√ß√£o.
         GuiControl, Principal:, startPause, Pause
         TrayTip, , Bot iniciado, , 0x1
     }
